@@ -57,7 +57,9 @@ cd monitorFinal/
 mvn spring-boot:run
 ## launch another ssh and then run below command curl localhost:5000
 
+## https://cloud.google.com/dataproc/docs/tutorials/bigquery-connector-spark-example#scala
 
+# https://cloud.google.com/bigquery/docs/reference/standard-sql/functions-and-operators#sum 
 SELECT MIN(x) as avg
 FROM 
 UNNEST([0, 2, 4, 4, 5]) as x;

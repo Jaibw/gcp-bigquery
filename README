@@ -120,3 +120,6 @@ PARTITION BY
   OPTIONS (
     partition_expiration_days = 3,
     require_partition_filter = TRUE);
+
+
+https://storage.googleapis.com/pub-tools-public-publication-data/pdf/36632.pdf

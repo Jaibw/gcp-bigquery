@@ -102,3 +102,15 @@ AS r"""
 
 SELECT customGreeting(names) AS everyone
 FROM UNNEST(['Hannah', 'Max', 'Jakob']) AS names;
+
+
+## Array
+select name FROM (SELECT name FROM `techlanders-aug22.jai_us_states_dataset.jai_us_states_table` limit 10 );
+
+## Subquery 
+select name 
+FROM 
+(SELECT name FROM `techlanders-aug22.jai_us_states_dataset.jai_us_states_table` limit 10 );
+
+
+

@@ -4,3 +4,7 @@ sudo apt install wget -y
 wget https://raw.githubusercontent.com/Jaibw/gcp-bigquery/master/gcloud-installation.sh
 sh gcloud-installation.sh
 which gcloud
+
+gcloud auth login --no-launch-browser
+gcloud config set project techlanders-aug22
+gcloud compute instances list --format='table(name,status,tags.list())'

@@ -51,6 +51,7 @@ Copy and paste code in jupyter nodebook and click on Run - https://raw.githubuse
 
 ## Java integration with bigquery 
 sudo apt install default-jdk maven git -y 
+export GOOGLE_APPLICATION_CREDENTIALS=~/key.json
 git clone https://github.com/Jaibw/monitorFinal.git
 cd monitorFinal/
 mvn spring-boot:run

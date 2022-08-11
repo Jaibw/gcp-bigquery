@@ -1,0 +1,5 @@
+## Install gcloud utility 
+sudo apt update 
+sudo apt install wget -y 
+wget https://raw.githubusercontent.com/Jaibw/gcp-bigquery/master/gcloud-installation.sh
+sh gcloud-installation.sh

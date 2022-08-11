@@ -32,3 +32,11 @@ sudo apt install python3-pip
 pip3 install --user --upgrade google-cloud-bigquery
 wget https://raw.githubusercontent.com/Jaibw/gcp-bigquery/master/python-demo01.py
 python3 python-demo01.py 
+
+gsutil cp gs://cloud-samples-data/bigquery/us-states/us-states.json ~/.
+cat us-states.json 
+wget https://raw.githubusercontent.com/Jaibw/gcp-bigquery/master/python-demo02.py
+sed -i 's/USER/jai/g' python-demo02.py 
+cat python-demo02.py 
+python3 python-demo02.py 
+## Check the results in Google Cloud Console > BigQuery 

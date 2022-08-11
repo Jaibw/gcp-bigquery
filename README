@@ -112,5 +112,11 @@ select name
 FROM 
 (SELECT name FROM `techlanders-aug22.jai_us_states_dataset.jai_us_states_table` limit 10 );
 
-
-
+## https://cloud.google.com/bigquery/docs/partitioned-tables
+CREATE TABLE
+  jai_us_states_dataset.demotable001 (transaction_id INT64, transaction_date DATE)
+PARTITION BY
+  transaction_date
+  OPTIONS (
+    partition_expiration_days = 3,
+    require_partition_filter = TRUE);

@@ -56,3 +56,47 @@ git clone https://github.com/Jaibw/monitorFinal.git
 cd monitorFinal/
 mvn spring-boot:run
 ## launch another ssh and then run below command curl localhost:5000
+
+
+SELECT MIN(x) as avg
+FROM 
+UNNEST([0, 2, 4, 4, 5]) as x;
+
+SELECT MAX(x) as avg
+FROM 
+UNNEST([0, 2, 4, 4, 5]) as x;
+
+SELECT AVG(x) as avg
+FROM 
+UNNEST([0, 2, 4, 4, 5]) as x;
+
+SELECT SUM(x) as avg
+FROM 
+UNNEST([0, 2, 4, 4, 5]) as x;
+
+
+CREATE TEMP FUNCTION AddFourAndDivide(x INT64, y INT64)
+RETURNS FLOAT64
+AS (
+  (x + 4) / y
+);
+ 
+SELECT
+  val, AddFourAndDivide(val, 2)
+FROM
+  UNNEST([2,3,5,8]) AS val
+
+CREATE TEMP FUNCTION customGreeting(a STRING)
+RETURNS STRING
+LANGUAGE js
+AS r"""
+  var d = new Date();
+  if (d.getHours() < 12) {
+    return 'Good Morning, ' + a + '!';
+  } else {
+    return 'Good Evening, ' + a + '!';
+  }
+""";
+
+SELECT customGreeting(names) AS everyone
+FROM UNNEST(['Hannah', 'Max', 'Jakob']) AS names;

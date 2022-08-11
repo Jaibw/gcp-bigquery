@@ -40,3 +40,10 @@ sed -i 's/USER/jai/g' python-demo02.py
 cat python-demo02.py 
 python3 python-demo02.py 
 ## Check the results in Google Cloud Console > BigQuery 
+
+pip3 install jupyter
+## reconnect your ssh 
+export GOOGLE_APPLICATION_CREDENTIALS=~/key.json
+jupyter notebook --port=8888 --ip=0.0.0.0
+Open chrome and access http://PUBLIC_IP:8888/?token=TOKEN 
+Copy and paste code in jupyter nodebook and click on Run - https://raw.githubusercontent.com/Jaibw/gcp-bigquery/master/python-demo01.py 

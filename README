@@ -47,3 +47,11 @@ export GOOGLE_APPLICATION_CREDENTIALS=~/key.json
 jupyter notebook --port=8888 --ip=0.0.0.0
 Open chrome and access http://PUBLIC_IP:8888/?token=TOKEN 
 Copy and paste code in jupyter nodebook and click on Run - https://raw.githubusercontent.com/Jaibw/gcp-bigquery/master/python-demo01.py 
+
+
+## Java integration with bigquery 
+sudo apt install default-jdk maven git -y 
+git clone https://github.com/Jaibw/monitorFinal.git
+cd monitorFinal/
+mvn spring-boot:run
+## launch another ssh and then run below command curl localhost:5000
